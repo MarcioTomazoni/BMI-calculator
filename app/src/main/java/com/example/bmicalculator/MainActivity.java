@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText ageEditText;
     private EditText feetEditText;
     private EditText inchesEditText;
-    private EditText wheightEditText;
+    private EditText weightEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,21 +36,43 @@ public class MainActivity extends AppCompatActivity {
         ageEditText = findViewById(R.id.edit_text_age);
         feetEditText = findViewById(R.id.edit_text_feet);
         inchesEditText = findViewById(R.id.edit_text_inches);
-        wheightEditText = findViewById(R.id.edit_text_weight);
+        weightEditText = findViewById(R.id.edit_text_weight);
         calculateButton = findViewById(R.id.button_calculate);
     }
 
     private void setupButtonClickListener() {
         calculateButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
+
                 calculateBmi();
             }
         });
     }
 
     private void calculateBmi() {
+       String ageText = ageEditText.getText().toString();
+       String feetText = feetEditText.getText().toString();
+       String inchesText = inchesEditText.getText().toString();
+       String weightText = weightEditText.getText().toString();
 
+       resultText.setText("Age: " + ageText + ", Feet " + feetText + ", Inches: " + inchesText + ", Weight " + weightText);
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
