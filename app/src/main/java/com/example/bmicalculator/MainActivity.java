@@ -56,7 +56,26 @@ public class MainActivity extends AppCompatActivity {
        String inchesText = inchesEditText.getText().toString();
        String weightText = weightEditText.getText().toString();
 
-       resultText.setText("Age: " + ageText + ", Feet " + feetText + ", Inches: " + inchesText + ", Weight " + weightText);
+       //Converting the number 'String' into 'int' variables
+       int age = Integer.parseInt(ageText);
+       int feet = Integer.parseInt(feetText);
+       int inches = Integer.parseInt(inchesText);
+       int weight = Integer.parseInt(weightText);
+
+       int totalInches = (feet * 12) + inches;
+
+       // Height in meters ie the inches multiplied by 0.0254
+        double heightInMeters = totalInches * 0.0254;
+
+        // BMI formula is weight in kg divided by height in meters squared
+        double bmi = weight / (heightInMeters * heightInMeters);
+
+        // We must convert the decimal/double into a String for our TextView
+        String bmiTextResult = String.valueOf(bmi);
+
+        resultText.setText(bmiTextResult);
+
+
     }
 
 
