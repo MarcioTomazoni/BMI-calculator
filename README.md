@@ -5,7 +5,7 @@ My only intention with publishing the project is to learn how to use the tools: 
 
 The project creates an app that calculates the Body Mass Index. The app must be installed on a mobile device using Android OS.
 
-The project is developed in java. I'm currently using the API:
+The project is developed in java. I'm currently using the following IDE:
 ```
 Android Studio Giraffe | 2022.3.1 Patch 1
 Build #AI-223.8836.35.2231.10671973, built on August 17, 2023
